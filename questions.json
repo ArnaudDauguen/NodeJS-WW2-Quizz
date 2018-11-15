@@ -178,5 +178,25 @@
       "1942"
     ],
     "goodAnswer": 1
+  },
+  {
+    "theme": 3,
+    "question": "Quel mois de 1941 Hitler déclara la guerre à la Grande Mère Partie (GMP / USSR) ?",
+    "reponses": [
+      "Février",
+      "Avril",
+      "Juin"
+    ],
+    "goodAnswer": 2
+  },
+  {
+    "theme": 3,
+    "question": "Suite au siège de Sevastopol, combien de batiments ont été rétrouvés intacts ?",
+    "reponses": [
+      "aucun mdr c'est un siège avec des bombardements pendant 9 mois",
+      "11",
+      "123"
+    ],
+    "goodAnswer": 1
   }
 ]

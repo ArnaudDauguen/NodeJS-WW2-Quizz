@@ -4,13 +4,22 @@ exports.delQuestion = function delQuestion(){
     const colours = require('colours');
     const fs = require('fs');
 
+    
+    //écriture du fichier question
+    function writeData(questionList){
+      fs.writeFile('questions.json', JSON.stringify(questionList, null, '  '), (err) => {
+        if (err) return err;
+        console.log(colours.green("question removed"))
+      });
+    }
+
     let promise = Promise.resolve()
     .then(() => {
       //création d'une liste avec que les questions (pour la séléction)
-      fullQuetionsList = require('./questions.json');
+      let fullQuetionsList = require('./questions.json');
       let listStringQuestion = []
       for(let i = 0; i < fullQuetionsList.length; i++){
-        listStringQuestion.push(`${i}///${fullQuetionsList[i].question}`)
+        listStringQuestion.push(`${i+1}___thème:${fullQuetionsList[i].theme}_${fullQuetionsList[i].question}`)
       }
 
       const selectionChoix = {
@@ -21,22 +30,18 @@ exports.delQuestion = function delQuestion(){
       }
 
       return inquirer.prompt(selectionChoix)
-     })
-     .then((answers) => {
-       console.log(answers)     
-      //on range les réponses
-      let questionToDelete = {
-       "theme" : parseInt(answers[0]),
-       "question" : answers[1],
-       "reponses" : [answers[2], answers[3], answers[4]],
-       "goodAnswer" : parseInt(answers[5][0]-1)
-      }
-      return questionToDelete
     })
-  
-    .then((questionToDelete) => {
-      anciantQuestionList.push(questionToDelete)
-      writeData(anciantQuestionList)
+    .then((answers) => {
+      console.log(answers)
+      fullQuetionsList = require('./questions.json');
+      //recup de l'id dans la phrase puis recup de la question a viré
+      const idQuestionToRemove = answers.selection.split("___")[0] -1
+      let questionToDelete = fullQuetionsList[idQuestionToRemove]
+      //remove
+      let newQuestionList = fullQuetionsList
+      newQuestionList.splice(idQuestionToRemove, 1) //splice renvoie le/les items virés donc on change de variable avant
+      //rewrite
+      writeData(newQuestionList)
     })
   
     .catch((err) => {

@@ -17,13 +17,6 @@ const fs = require('fs');
 /* ---------------------------
       F O N C T I O N S
 ----------------------------*/
-//écriture du fichier question
-function writeData(questionList){
-  fs.writeFile('questions.json', JSON.stringify(questionList, null, '  '), (err) => {
-    if (err) return err;
-    console.log('The file has been saved!');
-  });
-}
 
 //random pour l'ordre des question
 function choisirQuestion(questions){
@@ -33,7 +26,7 @@ function choisirQuestion(questions){
 //traitement de la question pour affichage
 function addQuestionToList(nouvelleQuestion, id){
   let question = {
-    type: 'checkbox',
+    type: 'list',
     message: `\n\n\n\n\n\n\n${nouvelleQuestion.question} \n`,
     name: `${id}`,
     choices: [

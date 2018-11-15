@@ -3,13 +3,24 @@ exports.addQuestion = function addQuestion(){
     const inquirer = require('inquirer');
     const colours = require('colours');
     const fs = require('fs');
+
+        
+    //écriture du fichier question
+    function writeData(questionList){
+      fs.writeFile('questions.json', JSON.stringify(questionList, null, '  '), (err) => {
+        if (err) return err;
+        console.log(colours.green("Question saved"))
+      });
+    }
+
+
     let promise = Promise.resolve()
     .then(() => {
       //inputs
       //formulaire
       inputs = [
         {
-          type: 'checkbox',
+          type: 'list',
           message: 'séléctionnez le thème de la réponse',
           name:'0',
           choices: ['1', '2', '3']
@@ -35,7 +46,7 @@ exports.addQuestion = function addQuestion(){
           name:'4'
         },
         {
-          type: 'checkbox',
+          type: 'list',
           message: 'séléctionnez la bonne réponse',
           name:'5',
           choices: ['1', '2', '3']
