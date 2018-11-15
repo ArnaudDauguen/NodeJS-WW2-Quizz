@@ -1,0 +1,182 @@
+[
+  {
+    "theme": 1,
+    "question": "Pourquoi les alliés on détruit la base navale de Saint Nazaire ?",
+    "reponses": [
+      "Pour empecher un cuirrassé Allemand de se ravitailler en France",
+      "Pour ralentir la production de sous-marins Allemands",
+      "Pour détruire des documents secrets"
+    ],
+    "goodAnswer": 0
+  },
+  {
+    "theme": 1,
+    "question": "Combien de porte-avions on participés à couler le Yamato ?",
+    "reponses": [
+      "11",
+      "15",
+      "17"
+    ],
+    "goodAnswer": 0
+  },
+  {
+    "theme": 1,
+    "question": "Quelle était la composition de la flotte d'attaque de Pear-Harbor ?",
+    "reponses": [
+      "4 porte-avions / 4 cuirassés / 1 croiseurs lourds / 5 croiseur léger / 7 destroyers",
+      "7 porte-avions / 6 cuirassés / 12 croiseurs lourds / 8 croiseur léger / 27 destroyers",
+      "6 porte-avions / 2 cuirassés / 2 croiseurs lourds / 1 croiseur léger / 9 destroyers"
+    ],
+    "goodAnswer": 2
+  },
+  {
+    "theme": 1,
+    "question": "Le Kumano était un...",
+    "reponses": [
+      "porte-avion",
+      "cuirassé",
+      "croiseur lourd"
+    ],
+    "goodAnswer": 2
+  },
+  {
+    "theme": 1,
+    "question": "Combien de toprilles le Yahagi (croiseur léger) a-t-il encaissé avant de sombrer ?",
+    "reponses": [
+      "1",
+      "7",
+      "9"
+    ],
+    "goodAnswer": 1
+  },
+  {
+    "theme": 1,
+    "question": "Comment à été détruit le cuirassé Mutsu ?",
+    "reponses": [
+      "Une tourelle à subitement explosée et coupé le navire en deux morceaux",
+      "Un sous-marin solitaire est tombé dessus par chance et l'a tropillé",
+      "Il a été démonté pour assembler le Yamato"
+    ],
+    "goodAnswer": 0
+  },
+  {
+    "theme": 1,
+    "question": "Comment a étée baptisé le sister-ship du Yamayo ?",
+    "reponses": [
+      "Shinano",
+      "Musashi",
+      "Taiho"
+    ],
+    "goodAnswer": 1
+  },
+  {
+    "theme": 1,
+    "question": "A une heure près, combien de temps l'Akagi a brulé avant que son commandant ordonne son torpillage ?",
+    "reponses": [
+      "3 heures",
+      "11 heures",
+      "19 heures"
+    ],
+    "goodAnswer": 2
+  },
+  {
+    "theme": 1,
+    "question": "Quel était l'armement principal du Yamato ?",
+    "reponses": [
+      "3 tourelles triples de 46cm",
+      "4 tourelles doubles de 35.6cm",
+      "5 tourelles triples de 51cm"
+    ],
+    "goodAnswer": 0
+  },
+  {
+    "theme": 1,
+    "question": "En quelle année a été déployé la classe de Cuirassé rapide Kongo ?",
+    "reponses": [
+      "1913",
+      "1936",
+      "1969"
+    ],
+    "goodAnswer": 0
+  },
+  {
+    "theme": 1,
+    "question": "Comment était nommé le plan des Etats-Unis pour une possible guerre contre le Japon ?",
+    "reponses": [
+      "plan de guerre blanc",
+      "plan de guerre orange",
+      "plan de guerre rouge"
+    ],
+    "goodAnswer": 1
+  },
+  {
+    "theme": 1,
+    "question": "Lequel de ces critères n'est pas un des points les plus avantageux de la long-lance, torpille japonaise démonique ?",
+    "reponses": [
+      "sa vitesse excéssive",
+      "sa porté abérante",
+      "sa légèreté inouïe"
+    ],
+    "goodAnswer": 2
+  },
+  {
+    "theme": 2,
+    "question": "Pourquoi la Ghost-Divizion de Rommel était-elle ainsi nommée ?",
+    "reponses": [
+      "Parce qu'ils allaient trop vite et les alliés ne les ont jamais rattrapés",
+      "La bataille était gagné a peine commencé",
+      "On les a jamais vu au front parce qu'on les demandait partout"
+    ],
+    "goodAnswer": 0
+  },
+  {
+    "theme": 2,
+    "question": "Quel était le but de l'opération allemande Sea Lion ?",
+    "reponses": [
+      "Prendre le controle de la mer Méditérranée avec l'aide de l'Italie",
+      "Couper les lignes de ravitaillement Américains dans l'Atlantique",
+      "Débarquer en Grande-Bretagne"
+    ],
+    "goodAnswer": 2
+  },
+  {
+    "theme": 2,
+    "question": "Quelle était la particularité du Tirpitz, 2nd cuirassé de la class Bismarck ?",
+    "reponses": [
+      "Il n'était pas équipé de cannon anti-aérien",
+      "C'était le seul cuirassé équipé de torpilles",
+      "Il pouvait dépasser les 70km/h"
+    ],
+    "goodAnswer": 1
+  },
+  {
+    "theme": 2,
+    "question": "Combien de temps à durée la bataille de France ?",
+    "reponses": [
+      "6 semaines",
+      "9 semaines",
+      "11 semaines"
+    ],
+    "goodAnswer": 0
+  },
+  {
+    "theme": 2,
+    "question": "La Luftwaffe était...",
+    "reponses": [
+      "la légion de Kiwis de Nouvelle-Zélande",
+      "la marine allemande",
+      "l'aviation allemande"
+    ],
+    "goodAnswer": 2
+  },
+  {
+    "theme": 2,
+    "question": "Comme ça en passant, en quelle année les Etats-Unis sont entré en guerre ?",
+    "reponses": [
+      "1940",
+      "1941",
+      "1942"
+    ],
+    "goodAnswer": 1
+  }
+]

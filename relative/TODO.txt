@@ -1,0 +1,37 @@
+reste a faire :
+DL question (séléction par liste de tt les question)
+data base
+
+
+quizz SGM
+
+thèmes :
+Japan Navy
+West Front
+East Front
+China
+Peaces/Diplomacy
+War Heroes
+
+1question
+3reponses (1bonne ou pls pour le plaisir)
+
+//TODO
+
+arguments pour choisir le theme (Commander)
+option pour ajouter/suppr questions
+questions/reponses dans une BDD (Sqlite)
+choix de la rep avec case a cocher (Inquirer)
+ecriture des scores dans un fichiers
+promeses, ba y en aura partout donc ça devrait aller
+
+
+bonus:
+barre de progression sur 10questions
+question random from partout (api)
+
+
+
+SELECT *
+FROM $Theme
+WHERE ID = $randomNumQuestion;
