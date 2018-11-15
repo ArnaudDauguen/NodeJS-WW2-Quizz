@@ -3,12 +3,27 @@ exports.delQuestion = function delQuestion(){
     const inquirer = require('inquirer');
     const colours = require('colours');
     const fs = require('fs');
+
     let promise = Promise.resolve()
     .then(() => {
-      //inputs
-      return inquirer.prompt()
+      //création d'une liste avec que les questions (pour la séléction)
+      fullQuetionsList = require('./questions.json');
+      let listStringQuestion = []
+      for(let i = 0; i < fullQuetionsList.length; i++){
+        listStringQuestion.push(`${i}///${fullQuetionsList[i].question}`)
+      }
+
+      const selectionChoix = {
+        type: 'list',
+        name: 'selection',
+        message: 'Choisissez la question à supprimer',
+        choices : listStringQuestion
+      }
+
+      return inquirer.prompt(selectionChoix)
      })
-     .then((answers) => {      
+     .then((answers) => {
+       console.log(answers)     
       //on range les réponses
       let questionToDelete = {
        "theme" : parseInt(answers[0]),
@@ -20,7 +35,6 @@ exports.delQuestion = function delQuestion(){
     })
   
     .then((questionToDelete) => {
-      let anciantQuestionList = require('./questions.json');
       anciantQuestionList.push(questionToDelete)
       writeData(anciantQuestionList)
     })

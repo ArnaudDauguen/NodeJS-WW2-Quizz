@@ -94,7 +94,7 @@ function displayQuestion(questions){
 program
   .version('1.0.0')
   .option('-a --add', 'Ajouter une question - WIP')
-  .option('-s --delete', 'Supprimer une question - WIP')
+  .option('-d --delete', 'Supprimer une question - WIP')
   //thèmes
   .option('-t --theme [themeID]', 'Choix du thème parmis : 1:Marine Japonnaise / 2:Front ouest européen / 3: Front est européen')
   .parse(process.argv)
