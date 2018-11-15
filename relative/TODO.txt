@@ -1,5 +1,9 @@
 reste a faire :
 DL question (séléction par liste de tt les question)
+	list de question : `id + question`
+	recup réponse séléctionnée
+	split ' ' [0]
+	remove question[id]
 data base
 
 
