@@ -1,5 +1,4 @@
 reste a faire :
-for(let i = 0; i < nbTime; i++) -> add/delete Question
 data base
 
 

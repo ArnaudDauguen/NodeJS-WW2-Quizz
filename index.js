@@ -124,10 +124,9 @@ if(program.theme){
         }
       }
       return questions
-    }else{
-      //on balance une erreur pour forcer le programme a quitter si le theme n'est pas reconnu
-      throw new Error("theme not found!")
     }
+    //on balance une erreur pour forcer le programme a quitter si le theme n'a pas été reconnu
+    throw new Error(colours.red('theme not found!'))
   })
 
   //structuration de la liste des questions a poser
@@ -138,26 +137,27 @@ if(program.theme){
     //création du tableau de questions à poser (max 10 / min combien il y en a)
     while( numCurrentQuestion < 10 && questions.length > 0){
       let nouvelleQuestion = choisirQuestion(questions)
-      //on rajoute dans la liste des questions a poser
+      //on la traite et on la rajoute dans la liste des questions a poser
       questionsAPoser.push(addQuestionToList(nouvelleQuestion, numCurrentQuestion))
-      //on dégage la question de la liste globale
+      //on la dégage la question de la liste des questions potentielles
       questions.splice(questions.indexOf(nouvelleQuestion), 1)
-
       numCurrentQuestion++
     }
 
     //on sort une erreur s'il n'y a pas de questions a poser
-    if(questionsAPoser.length < 1){
-      throw new Error("Ce thème ne contient pas encore de question...")
+    if(questionsAPoser.length < 5){
+      throw new Error(colours.red('Ce thème ne contient pas assez de question... \n Quizz annulé'))
     }
 
+    //poser les questions avec résultats direct apres
     return displayQuestion(questionsAPoser)
   })
 
   .catch((err) => {
     console.log(err.message)
-    if(err.message == 'theme not found!'){
-      console.log('Veuillez choisir un thème parmis \n1:Marine Japonnaise \n2:Front ouest européen \n3:Front est européen \n avec la formulation \'node ./index.js -t <num>\'')
+    if(err.message == colours.red('theme not found!') || err.message == colours.red('Ce thème ne contient pas assez de question... \n Quizz annulé')){
+      console.log(colours.yellow('Veuillez choisir un thème parmis \n1:Marine Japonnaise \n2:Front ouest européen \n3:Front est européen \n avec la formulation \'node ./index.js -t <num>\''))
     }
   })
+
 }
