@@ -26,7 +26,7 @@ function choisirQuestion(questions){
 //traitement de la question pour affichage
 function addQuestionToList(nouvelleQuestion, id){
   let question = {
-    type: 'list',
+    type: 'checkbox',
     message: `\n\n\n\n\n\n\n${nouvelleQuestion.question} \n`,
     name: `${id}`,
     choices: [
@@ -51,10 +51,10 @@ function displayQuestion(questions){
 
       //compararison, savoir s'il s'est gourré
       if(goodAnswer == reponse){
-        console.log(`question ${i} : ` + colours.green("Passed"))
+        console.log(`question ${i+1} : ` + colours.green("Passed"))
         score++
       }else{
-        console.log(`question ${i} : ` + colours.red("Failed"))
+        console.log(`question ${i+1} : ` + colours.red("Failed"))
       }
     }
 
@@ -86,10 +86,9 @@ function displayQuestion(questions){
 // conf des paramètres
 program
   .version('1.0.0')
-  .option('-a --add', 'Ajouter une question - WIP')
-  .option('-d --delete', 'Supprimer une question - WIP')
-  //thèmes
-  .option('-t --theme [themeID]', 'Choix du thème parmis : 1:Marine Japonnaise / 2:Front ouest européen / 3: Front est européen')
+  .option('-a --add ', 'Ajouter une question')
+  .option('-d --delete ', 'Supprimer une question')
+  .option('-t --theme [themeID]', 'Choix du thème parmis : \n\t1:Marine Japonnaise \n\t2:Front ouest européen \n\t3: Front est européen')
   .parse(process.argv)
 
 

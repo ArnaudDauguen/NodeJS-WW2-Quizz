@@ -18,7 +18,7 @@ exports.addQuestion = function addQuestion(){
     .then(() => {
       //inputs
       //formulaire
-      inputs = [
+      const inputs = [
         {
           type: 'list',
           message: 'séléctionnez le thème de la réponse',
@@ -57,14 +57,14 @@ exports.addQuestion = function addQuestion(){
     .then((inputs) => {
       //poser les question de formation de nouvelle question
       return inquirer.prompt(inputs)
-     })
-     .then((answers) => {      
+    })
+    .then((answers) => {      
       //on range les réponses
       let nouvelleQuestion = {
-       "theme" : parseInt(answers[0]),
-       "question" : answers[1],
-       "reponses" : [answers[2], answers[3], answers[4]],
-       "goodAnswer" : parseInt(answers[5][0]-1)
+      "theme" : parseInt(answers[0]),
+      "question" : answers[1],
+      "reponses" : [answers[2], answers[3], answers[4]],
+      "goodAnswer" : parseInt(answers[5][0]-1)
       }
       return nouvelleQuestion
     })
