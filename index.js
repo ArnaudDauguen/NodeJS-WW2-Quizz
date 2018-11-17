@@ -18,6 +18,10 @@ const fs = require('fs');
       F O N C T I O N S
 ----------------------------*/
 
+//consulter aide (msg)
+function consulterAider(){
+  console.log(colours.yellow('Veuillez consulter l\'aide, \'node ./index.js -h\''))
+}
 //random pour l'ordre des question
 function choisirQuestion(questions){
   return questions[Math.floor(Math.random() * questions.length)]
@@ -85,10 +89,10 @@ function displayQuestion(questions){
 ----------------------------*/
 // conf des paramètres
 program
-  .version('1.0.0')
+  .version('1.3.18')
   .option('-a --add ', 'Ajouter une question')
   .option('-d --delete ', 'Supprimer une question')
-  .option('-t --theme [themeID]', 'Choix du thème parmis : \n\t1:Marine Japonnaise \n\t2:Front ouest européen \n\t3: Front est européen')
+  .option('-t --theme [themeID]', 'Choix du thème parmis : \n\t1:Marine Japonnaise \n\t2:Front ouest européen \n\t3: Front est européen \n\tsans valeur, lancera un quizz sans thème particulier')
   .parse(process.argv)
 
 
@@ -96,18 +100,18 @@ program
 if(program.add){
  require('./addQuestion.js').addQuestion()
 }
-if(program.delete){
+else if(program.delete){
   require('./delQuestion.js').delQuestion()
 }
 
 
 // Q U I Z Z
-if(program.theme){
+else if(program.theme){
   let promise = Promise.resolve()
   //recuperation des questions
   .then(() => {
-    const theme = program.theme
-    if(theme >= 1 && theme <= 3) {
+    const theme = program.themeID
+    if((theme >= 1 && theme <= 3) || theme == undefined) {
       let fullQuetionsList
       //recup des q sur BDD
       // then recup
@@ -117,10 +121,15 @@ if(program.theme){
       
       //on ramasse les questions du bon theme
       let questions = []
-      for(let i = 0; i < fullQuetionsList.length; i++){
-        const thisQuestion = fullQuetionsList[i]
-        if(thisQuestion.theme == theme){
-          questions.push(thisQuestion)
+      //si pas de thème, alors on les prends tous
+      if(theme == undefined){
+        questions = fullQuetionsList
+      }else{
+        for(let i = 0; i < fullQuetionsList.length; i++){
+          const thisQuestion = fullQuetionsList[i]
+          if(thisQuestion.theme == theme){
+            questions.push(thisQuestion)
+          }
         }
       }
       return questions
@@ -128,6 +137,7 @@ if(program.theme){
     //on balance une erreur pour forcer le programme a quitter si le theme n'a pas été reconnu
     throw new Error(colours.red('theme not found!'))
   })
+
 
   //structuration de la liste des questions a poser
   .then((questions) => {
@@ -146,7 +156,7 @@ if(program.theme){
 
     //on sort une erreur s'il n'y a pas de questions a poser
     if(questionsAPoser.length < 5){
-      throw new Error(colours.red('Ce thème ne contient pas assez de question... \n Quizz annulé'))
+      throw new Error(colours.red(`Ce thème ne contient pas assez de questions (${questionsAPoser.length}/5)... \n Quizz annulé`))
     }
 
     //poser les questions avec résultats direct apres
@@ -156,8 +166,12 @@ if(program.theme){
   .catch((err) => {
     console.log(err.message)
     if(err.message == colours.red('theme not found!') || err.message == colours.red('Ce thème ne contient pas assez de question... \n Quizz annulé')){
-      console.log(colours.yellow('Veuillez choisir un thème parmis \n1:Marine Japonnaise \n2:Front ouest européen \n3:Front est européen \n avec la formulation \'node ./index.js -t <num>\''))
+      console.log(colours.yellow('Veuillez choisir un thème parmis \n1:Marine Japonnaise \n2:Front ouest européen \n3:Front est européen \n avec la formulation \'node ./index.js -t <num>\'\n\'node ./index.js -t\' lancera un quizz sans thème particulier'))
     }
   })
 
+}
+//si aucun argument n'a été passé, consulter l'aider
+else{
+  consulterAide()
 }
