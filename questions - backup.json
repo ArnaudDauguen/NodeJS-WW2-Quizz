@@ -1,11 +1,11 @@
 [
   {
-    "theme": 1,
+    "theme": 2,
     "question": "Pourquoi les alliés on détruit la base navale de Saint Nazaire ?",
     "reponses": [
-      "Pour empecher un cuirrassé Allemand de se ravitailler en France",
-      "Pour ralentir la production de sous-marins Allemands",
-      "Pour détruire des documents secrets"
+      "Pour empecher un cuirrassé Allemand de se ravitailler en France après tout le Tirpitz dans l'Atlantique c'est pas cool",
+      "Pour ralentir la production de sous-marins Allemands mais demain on invente le sonar",
+      "Pour détruire des documents secrets, les Sekrits Dokumints sont pourtant une spécialité soviétique"
     ],
     "goodAnswer": 0
   },
@@ -15,7 +15,7 @@
     "reponses": [
       "11",
       "15",
-      "17"
+      "17 mais en cas de doute tapé 11 même si on sait que les Américains s'acharent un peu de temps en temps"
     ],
     "goodAnswer": 0
   },
@@ -25,7 +25,7 @@
     "reponses": [
       "4 porte-avions / 4 cuirassés / 1 croiseurs lourds / 5 croiseur léger / 7 destroyers",
       "7 porte-avions / 6 cuirassés / 12 croiseurs lourds / 8 croiseur léger / 27 destroyers",
-      "6 porte-avions / 2 cuirassés / 2 croiseurs lourds / 1 croiseur léger / 9 destroyers"
+      "6 porte-avions / 2 cuirassés / 2 croiseurs lourds / 1 croiseur léger / 9 destroyers, choisissez celle-ci si vous avez un doute"
     ],
     "goodAnswer": 2
   },
@@ -43,9 +43,9 @@
     "theme": 1,
     "question": "Combien de toprilles le Yahagi (croiseur léger) a-t-il encaissé avant de sombrer ?",
     "reponses": [
-      "1",
-      "7",
-      "9"
+      "1, un croiseur léger c'est fragile",
+      "7, suffirait que la première l'immobilise et le compteur monte tout seul après ça",
+      "9, il va falloir se poser des questions, on approche du record du Yamato quand même"
     ],
     "goodAnswer": 1
   },
@@ -61,7 +61,7 @@
   },
   {
     "theme": 1,
-    "question": "Comment a étée baptisé le sister-ship du Yamayo ?",
+    "question": "Comment a étée baptisé le sister-ship du Yamato ?",
     "reponses": [
       "Shinano",
       "Musashi",
@@ -73,9 +73,9 @@
     "theme": 1,
     "question": "A une heure près, combien de temps l'Akagi a brulé avant que son commandant ordonne son torpillage ?",
     "reponses": [
-      "3 heures",
-      "11 heures",
-      "19 heures"
+      "3 heures, il a quand même vite lacher l'affaire",
+      "11 heures, c'était l'heure du gouter et les BN n'attendent pas",
+      "19 heures, ça fait quand même un peu long pour un bateau"
     ],
     "goodAnswer": 2
   },
@@ -124,7 +124,7 @@
     "question": "Pourquoi la Ghost-Divizion de Rommel était-elle ainsi nommée ?",
     "reponses": [
       "Parce qu'ils allaient trop vite et les alliés ne les ont jamais rattrapés",
-      "La bataille était gagné a peine commencé",
+      "La bataille était gagné a peine commencé, le drapeau blanc, une spécialité française",
       "On les a jamais vu au front parce qu'on les demandait partout"
     ],
     "goodAnswer": 0
@@ -133,9 +133,9 @@
     "theme": 2,
     "question": "Quel était le but de l'opération allemande Sea Lion ?",
     "reponses": [
-      "Prendre le controle de la mer Méditérranée avec l'aide de l'Italie",
-      "Couper les lignes de ravitaillement Américains dans l'Atlantique",
-      "Débarquer en Grande-Bretagne"
+      "Prendre le controle de la mer Méditérranée avec l'aide de l'Italie mais faudrait dèjà prendre Malte",
+      "Couper les lignes de ravitaillement Américains dans l'Atlantique, sachant que des wolf-pack de sous-marins s'en sont occupé ça aurait du être appelé \"Sea Wolf\"",
+      "Débarquer en Grande-Bretagne, dernier ennemi en Europe"
     ],
     "goodAnswer": 2
   },
@@ -143,9 +143,9 @@
     "theme": 2,
     "question": "Quelle était la particularité du Tirpitz, 2nd cuirassé de la class Bismarck ?",
     "reponses": [
-      "Il n'était pas équipé de cannon anti-aérien",
-      "C'était le seul cuirassé équipé de torpilles",
-      "Il pouvait dépasser les 70km/h"
+      "Il n'était pas équipé de cannon anti-aérien, pas étonnant que son sister-ship se soit fait abattre par les Anglais",
+      "C'était le seul cuirassé équipé de torpilles mais le but d'un cuirrassé c'est de tuer les gens à distance",
+      "Il pouvait dépasser les 70km/h, un navire lourd qui va plus vite que le son c'est toujours un bonus sympa"
     ],
     "goodAnswer": 1
   },
@@ -153,9 +153,9 @@
     "theme": 2,
     "question": "Combien de temps à durée la bataille de France ?",
     "reponses": [
-      "6 semaines",
-      "9 semaines",
-      "11 semaines"
+      "6 semaines, c'est, à peut de chose près, le temps de faire Dunkerque - Paris avec des Pz.IV",
+      "9 semaines, Hitler attendais une chienne et voulais qu'elle naissent dans \"la plus belle ville du monde\"",
+      "11 semaines, juste assez pour laisser croire au français qu'il tiendrais 3x plus que la Pologne"
     ],
     "goodAnswer": 0
   },
@@ -173,19 +173,19 @@
     "theme": 2,
     "question": "Comme ça en passant, en quelle année les Etats-Unis sont entré en guerre ?",
     "reponses": [
-      "1940",
-      "1941",
-      "1942"
+      "1940, faut se dépécher, les vainqueurs écrivent l'Histoire",
+      "1941, \"le géant s'éveille\" mais il prend quand même son temps",
+      "1942, ça fait joli sur les rapport et puis Roosevelt était un Illuminati reptillien"
     ],
     "goodAnswer": 1
   },
   {
     "theme": 3,
-    "question": "Quel mois de 1941 Hitler déclara la guerre à la Grande Mère Partie (GMP / USSR) ?",
+    "question": "Quel mois de 1941 Hitler déclara la guerre à la Grande Mère Partie (GMP - USSR) ?",
     "reponses": [
-      "Février",
-      "Avril",
-      "Juin"
+      "Février, ça semble logiques les neiges fondent",
+      "Avril mais Staline et les généraux allemands avaient pas compris que c'était une blague",
+      "Juin, c'est un peu bête les neiges de Russie arrivent dans pas longtemps mais après tout, l'Histoire se répète"
     ],
     "goodAnswer": 2
   },
@@ -193,10 +193,50 @@
     "theme": 3,
     "question": "Suite au siège de Sevastopol, combien de batiments ont été rétrouvés intacts ?",
     "reponses": [
-      "aucun mdr c'est un siège avec des bombardements pendant 9 mois",
+      "aucun mdr, c'est un siège avec des bombardements pendant 9 mois",
       "11",
       "123"
     ],
     "goodAnswer": 1
+  },
+  {
+    "theme": 3,
+    "question": "\"We have only to kick in the door and the whole rotten structure will come crashing down.\" De quel pays Hitler parlait-il ?",
+    "reponses": [
+      "l'Union des Républiques Socialistes Soviétiques, c'est pas sympa pour la Mère Partie (MP)",
+      "la Pologne, mais ça parait un peu évident",
+      "le Suisse, après tout, c'est juste un pays perdu dans les montagnes avec les meilleurs soldats du monde et un peu d'argent"
+    ],
+    "goodAnswer": 0
+  },
+  {
+    "theme": 3,
+    "question": "Qu'est-ce que le \"Oktyabrskaya Revolyutsiya\" (\"Révolution d'Octobre\" pour les fragiles) ?",
+    "reponses": [
+      "La révolution de Lénine contre le Tsar de Russie mais ça semble trop évident",
+      "Un dreadnout (petit cuirassé) après tout on met 'le' devant son nom",
+      "Une faute de frappe, on devrit dire 'LA révolution' en bon français communiste"
+    ],
+    "goodAnswer": 1
+  },
+  {
+    "theme": 3,
+    "question": "Qu'est-ce que \"Gangut\" ?",
+    "reponses": [
+      "C'est le \"Oktyabrskaya Revolyutsiya\" mais à force ça devient redondant",
+      "Un moteur de la N-1 plus grosse fusée Soviétique, mais la ça n'a plus aucun rapport avec le quizz",
+      "Un meilleur nom que \"nouveau système de propultion de blindés à base de Vodka d'Ukraine\""
+    ],
+    "goodAnswer": 0
+  },
+  {
+    "theme": 3,
+    "question": "Pour quel camps la Bulgarie a t-elle combattue ?",
+    "reponses": [
+      "Pour l'Axe Nazi, un coup d'Etat ça marche bien pour monter le fascisme au pouvoir",
+      "Pour les Commniste envahisseurs de l'Est, pour éviter de se faire absorber par la propagande Soviétique",
+      "Pour les Alliés Démocrates mais ça semble louche un pays seul dans le coin (je précise que c'est entre la Turquie et la Roumanie au cas ou)"
+    ],
+    "goodAnswer": 0
   }
 ]
