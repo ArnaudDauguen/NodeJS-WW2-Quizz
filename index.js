@@ -98,7 +98,7 @@ function writeDataInFile(toWrite, file){
 ----------------------------*/
 // conf des paramètres
 program
-  .version('1.4.0')
+  .version('1.4.1')
   .option('-a --add ', 'Ajouter une question')
   .option('-d --delete ', 'Supprimer une question')
   .option('-t --theme [themeID]', 'Choix du thème parmis : \n\t1:Marine Japonnaise \n\t2:Front ouest européen \n\t3: Front est européen \n\tsans valeur, lancera un quizz sans thème particulier')
