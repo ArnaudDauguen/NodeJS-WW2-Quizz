@@ -19,7 +19,7 @@ const fs = require('fs');
 ----------------------------*/
 
 //consulter aide (msg)
-function consulterAider(){
+function consulterAide(){
   console.log(colours.yellow('Veuillez consulter l\'aide, \'node ./index.js -h\''))
 }
 //random pour l'ordre des question
@@ -72,6 +72,7 @@ function displayQuestion(questions){
 
     //affichage du score
     console.log(colours.cyan("Score : ") + colours.yellow(`${score} / ${questions.length}`))
+    process.exit()
   })
 
   //en cas d'erreur, on préviens et on quitte
@@ -80,6 +81,14 @@ function displayQuestion(questions){
     console.log(colours.red("Une erreur est survenue..."))
     process.exit()
   })
+  
+}
+
+//écriture d'un fichier
+function writeDataInFile(toWrite, file){
+  fs.writeFile(file, JSON.stringify(toWrite, null, '  '), (err) => {
+    if (err) return colours.red(err);
+  });
 }
 
 
@@ -89,24 +98,45 @@ function displayQuestion(questions){
 ----------------------------*/
 // conf des paramètres
 program
-  .version('1.3.18')
+  .version('1.4.0')
   .option('-a --add ', 'Ajouter une question')
   .option('-d --delete ', 'Supprimer une question')
   .option('-t --theme [themeID]', 'Choix du thème parmis : \n\t1:Marine Japonnaise \n\t2:Front ouest européen \n\t3: Front est européen \n\tsans valeur, lancera un quizz sans thème particulier')
+  .option('-b --backup ', 'Restaure le fichier \'questions - backup.json\'')
+  .option('-s --save ', 'Enregistre les questions dans \'questions - backup.json\'')
   .parse(process.argv)
 
+
+//detection d'aucun argument
+if(!(program.theme || program.backup || program.save || program.delete || program.add)){
+  consulterAide()
+}
 
 //interraction avec la liste de question
 if(program.add){
  require('./addQuestion.js').addQuestion()
 }
-else if(program.delete){
+if(program.delete){
   require('./delQuestion.js').delQuestion()
 }
 
+//interraction avec le fichier de questio,
+if(program.backup){
+  const questionsToRestore = require('./questions - backup.json')
+  writeDataInFile(questionsToRestore, 'questions.json')
+  console.log(colours.green("Restoration complete"))
+}
+if(program.save){
+  const questionsToBackup = require('./questions.json')
+  writeDataInFile(questionsToBackup, 'questions - backup.json')
+  console.log(colours.green("Backup done"))
+
+}
+
+
 
 // Q U I Z Z
-else if(program.theme){
+if(program.theme){
   let promise = Promise.resolve()
   //recuperation des questions
   .then(() => {
@@ -161,6 +191,7 @@ else if(program.theme){
 
     //poser les questions avec résultats direct apres
     return displayQuestion(questionsAPoser)
+
   })
 
   .catch((err) => {
@@ -168,10 +199,9 @@ else if(program.theme){
     if(err.message == colours.red('theme not found!') || err.message == colours.red('Ce thème ne contient pas assez de question... \n Quizz annulé')){
       console.log(colours.yellow('Veuillez choisir un thème parmis \n1:Marine Japonnaise \n2:Front ouest européen \n3:Front est européen \n avec la formulation \'node ./index.js -t <num>\'\n\'node ./index.js -t\' lancera un quizz sans thème particulier'))
     }
+
+    process.exit()
   })
 
-}
-//si aucun argument n'a été passé, consulter l'aider
-else{
-  consulterAide()
+
 }

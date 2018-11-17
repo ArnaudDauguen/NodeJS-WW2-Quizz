@@ -8,7 +8,7 @@ exports.delQuestion = function delQuestion(){
     //écriture du fichier question
     function writeData(questionList){
       fs.writeFile('questions.json', JSON.stringify(questionList, null, '  '), (err) => {
-        if (err) return err;
+        if (err) return colours.red(err);
         console.log(colours.green("question removed"))
       });
     }
