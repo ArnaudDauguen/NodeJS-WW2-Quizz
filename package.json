@@ -12,6 +12,7 @@
   "dependencies": {
     "colours": "^0.6.0-2",
     "commander": "^2.19.0",
+    "fs": "0.0.1-security",
     "inquirer": "^6.2.0"
   }
 }
