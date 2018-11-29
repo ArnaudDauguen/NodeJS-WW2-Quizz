@@ -1,3 +1,3 @@
-NodeJS---WW2-Quizz
-
-run 'npm install' before first launch
+```diff
+- run 'npm install' before first launch
+```
